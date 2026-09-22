@@ -64,6 +64,7 @@ nav span {
 }
 
 nav a:focus-visible,
+nav button:focus-visible,
 .logo:focus-visible {
     outline: 3px solid #f0b429;
     outline-offset: 4px;
@@ -81,6 +82,15 @@ nav a:focus-visible,
     background: #ffffff;
     border: 1px solid #d6deeb;
     border-radius: 8px;
+}
+
+.agenda ul {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.agenda li {
+    margin-top: 0.75rem;
 }
 
 .hero input,
