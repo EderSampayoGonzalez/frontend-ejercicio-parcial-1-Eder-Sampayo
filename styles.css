@@ -57,6 +57,7 @@ nav > ul {
     gap: 0.75rem;
 }
 
+label,
 nav a,
 nav span {
     color: #123b70;
