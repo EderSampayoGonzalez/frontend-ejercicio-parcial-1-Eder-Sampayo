@@ -1,0 +1,157 @@
+<!-- frontend-ejercicio-parcial-1
+
+Ejercicio
+
+La universidad organizará un evento de tecnología y necesitan una landing page que cumpla con:
+
+    Estructura HTML semántica clara (header, nav, main, section, footer).
+
+    Diseño web responsivo (Móvil primerio)
+
+    Buenas prácticas de accesibilidad
+
+    Aplicación de heurísticas de diseño (consistencia, visibilidad, prevención de errores, minimalismo).
+
+Como desarrollador Front End, ayuda a la universidad a desarrollar la página siguiendo los siguientes requisitos:
+
+    HTML
+
+    header con logo (puede ser un texto simulado) y menú de navegación. 
+
+    main con
+        Hero section con título, subtítulo y botón de registro.
+        Agenda en formato de lista
+        Sección de ponentes (tarjetas con foto, nombre y titulo de charla).
+
+    Footer con contacto y redes sociales.
+
+    CSS / Diseño responsivo
+        Base mobile-first: todo en una columna.
+        Tablet: menú horizontal y 2 columnas en agenda/ponentes.
+        Escrtorio: layout en 3 columnas para ponentes.
+
+    Imágenes fluidas
+
+    Accesibilidad
+        Todas las imágenes con alt. ### Listo
+        Inputs de formulario con label. ### Listo
+        Contraste mínimo AA (ejemplo: texto oscuro sobre fondo claro).
+        Navegación por teclado (enlaces y botones alcanzables con tab).
+        Heurísticas de diseño aplicadas
+        Visibilidad del estado: botón de registro con :hover y :focus visibles.
+        Consistencia y estándares: menú de navegación igual en todas las vistas.
+        Prevención de errores: campo de correo con type="email".
+        Estética minimalista: no saturar la página con texto o colores innecesarios.
+
+Rúbrica:
+
+    HTML semántico.
+
+    Diseño web responsivo
+
+    Al menos 3 criterios de Accesibilidad
+
+    Al menos 3 Heurísticas de Diseño
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UANL Eventos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <header>
+            <div class="marca">
+                <img src="uanl.png" alt="Logo de UANL" class="logo-img">
+                <a class="logo" href="#inicio">UANL Eventos</a>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li>
+                        <span>Explorar</span>
+                        <ul class="explorar-mas">
+                            <li><a href="#agenda">Eventos</a></li>
+                            <li><a href="#agenda">Calendario</a></li>
+                            <li><a href="#registro">Registro Eventos</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    <main>
+        <!-- Hero section con título, subtítulo y botón de registro -->
+        <section class="hero" id="inicio">
+            <h1>Bienvenidos al evento de tecnología UANL</h1> 
+            <p>Explora las últimas tendencias en tecnología y desarrollo web.</p>
+            <label for="nombre">Nombre</label>
+            <input type="name" placeholder="Ingresa tu nombre" aria-label="Nombre">
+            <p></p>
+            <label for="correo">Correo electrónico</label>
+            <input type="email" placeholder="Ingresa tu correo electrónico" aria-label="Correo electrónico">
+            <button id="boton-registro">Regístrate Ahora</button>
+        </section>
+
+        <!-- Agenda en formato de lista -->
+    <section class="agenda" id="agenda">
+            <h2>Agenda del Evento</h2>
+            <ul>
+                <li>09:00 AM - Apertura y Bienvenida</li>
+                <li>10:00 AM - Conferencia: "Desarrollo Web Moderno"</li>
+                <li>11:30 AM - Taller: "Estilos CSS Avanzados"</li>
+                <li>01:00 PM - Almuerzo</li>
+                <li>02:00 PM - Panel de Discusión: "La importancia del mobile first"</li>
+                <li>04:00 PM - Cierre y Networking</li>
+            </ul>
+        </section>
+
+        <!-- Sección de ponentes (tarjetas con foto, nombre y titulo de charla) -->
+        <section class="ponentes">
+            <h2>Ponentes Destacados</h2>
+            <div class="tarjeta-ponente">
+                <img src="ponente1.jpg" alt="Foto del ponente Ricardo Anaya">
+                <h3>Ricardo Anaya</h3>
+                <p>"Desarrollo Web Moderno"</p>
+            </div>
+            <div class="tarjeta-ponente">
+                <img src="ponente2.jpg" alt="Foto del ponente Maria antonieta">
+                <h3>María Antonieta</h3>
+                <p>"Estilos CSS Avanzados"</p>
+            </div>
+            <div class="tarjeta-ponente">
+                <img src="ponente3.jpg" alt="Foto del ponente Eder Sampayo">
+                <h3>Eder Sampayo</h3>
+                <p>"La importancia del mobile first"</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <p>Correo: <a href="mailto:eventos@uanl.com.mx">eventos@uanl.com.mx</a></p>
+            <p>Teléfono: <a href="tel:+528184341093">(+52) 81 8434 1093</a></p>
+            <div class="redes-sociales">
+                <img class="icono-red" src="facebook.png" alt="Icono de Facebook">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <img class="icono-red" src="twitter.png" alt="Icono de Twitter">
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <img class="icono-red" src="instagram.png" alt="Icono de Instagram">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </section>
+    </footer>
+</body>
+<script src="javascript.js"></script>
+</html>

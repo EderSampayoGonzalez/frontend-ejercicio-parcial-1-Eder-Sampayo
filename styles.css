@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #172033;
+    background: #f5f7fb;
+    font-family: Roboto, sans-serif;
+}
+
+header,
+main,
+footer {
+    width: min(100% - 2rem, 1200px);
+    margin-inline: auto;
+}
+
+header {
+    padding-block: 1rem;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #123b70;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+.logo-img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-bottom: 0;
+}
+
+nav ul,
+.explorar-mas {
+    padding: 0;
+    list-style: none;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+nav a,
+nav span {
+    color: #123b70;
+    font-weight: 700;
+}
+
+nav a:focus-visible,
+.logo:focus-visible {
+    outline: 3px solid #f0b429;
+    outline-offset: 4px;
+}
+
+.explorar-mas {
+    margin: 0.5rem 0 0 1rem;
+}
+
+.hero,
+.agenda,
+.ponentes {
+    padding: 1.5rem;
+    margin-block: 1rem;
+    background: #ffffff;
+    border: 1px solid #d6deeb;
+    border-radius: 8px;
+}
+
+.hero input,
+.hero button {
+    display: block;
+    width: 100%;
+    min-height: 2.75rem;
+    margin-top: 0.75rem;
+    padding: 0.65rem;
+    font: inherit;
+}
+
+.hero button {
+    color: #ffffff;
+    background: #123b70;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero button:hover,
+.hero button:focus-visible {
+    background: #0a274b;
+    outline: 3px solid #f0b429;
+    outline-offset: 2px;
+}
+
+.ponentes {
+    display: grid;
+    gap: 1rem;
+}
+
+.tarjeta-ponente {
+    padding: 1rem;
+    border: 1px solid #d6deeb;
+    border-radius: 8px;
+}
+
+.icono-red {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    nav > ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .explorar-mas {
+        margin-left: 0;
+    }
+
+    .hero input,
+    .hero button {
+        max-width: 32rem;
+    }
+
+    .agenda,
+    .ponentes {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .agenda h2,
+    .ponentes h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .ponentes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
